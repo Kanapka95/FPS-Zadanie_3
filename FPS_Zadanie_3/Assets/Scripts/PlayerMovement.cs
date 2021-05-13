@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	
-	public CharcterController charContr;
+	public CharacterController charContr;
 	
 	private float xDir;
 	private float zDir;
 	private float yDir;
 	private Vector3 moveDirection;
+	public float jump = 1f;
 	
 	public float speed = 10f;
 	public float groundDist = 0.2F;
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       isGrounded = Physics.CheckSphere(grandCheck.position, groundDist, groundLayer);  
+       isGrounded = Physics.CheckSphere(grandcheck.position, groundDist, groundLayer);  
 	   
 	   if(isGrounded && yDir <0)
 	   {
